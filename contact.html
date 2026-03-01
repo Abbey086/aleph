@@ -331,16 +331,16 @@
               <input type="hidden" name="_subject" value="New Application!">
               <div>
                 <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="cName">Child's Name</label>
-                <input id="cName" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. Amina N." />
+                <input id="cName" name="Name" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. Amina N." />
               </div>
               <div class="grid grid-cols-2 gap-3">
                 <div>
                   <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="cAge">Age</label>
-                  <input id="cAge" type="number" min="2" max="12" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. 4" />
+                  <input id="cAge" name="Age" type="number" min="2" max="12" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. 4" />
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="level">Class</label>
-                  <select id="level" required class="form-input w-full px-4 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none appearance-none cursor-pointer">
+                  <select id="level" name="Class" required class="form-input w-full px-4 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none appearance-none cursor-pointer">
                     <option value="" class="text-gray-900">Select...</option>
                     <option class="text-gray-900">Baby Class</option>
                     <option class="text-gray-900">Middle Class</option>
@@ -356,17 +356,17 @@
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="gName">Parent / Guardian</label>
-                <input id="gName" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="Your name" />
+                <input id="gName" name="Parents Name" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="Your name" />
               </div>
               <div>
                 <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="gPhone">Phone (WhatsApp)</label>
-                <input id="gPhone" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="0777 000 000" />
+                <input id="gPhone" name="Parents Contact" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="0777 000 000" />
               </div>
             </div>
 
             <div>
               <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="area">Location / Stage</label>
-              <input id="area" class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. Kawanda / Bombo Road" />
+              <input id="area" class="Location" class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. Kawanda / Bombo Road" />
             </div>
 
             <button type="submit" class="w-full px-8 py-4 rounded-full font-bold bg-maroon text-white hover:bg-white hover:text-navy shadow-floating hover:-translate-y-1 transition-all duration-300 flex justify-center items-center gap-2 mt-4">
