@@ -99,7 +99,7 @@
   <main>
     <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center pt-16 overflow-hidden">
       <div class="absolute inset-0 w-full h-full">
-        <img src="https://media.istockphoto.com/id/1417645836/photo/teacher-and-joyful-students-celebrate-successful-completion-of-collective-school-work-in-a.jpg?s=612x612&w=0&k=20&c=3I0-FbqfRcKjZ19eWblarHDtxso1Ta1rzM8IIlqTvqk=" alt="Visit ALEPH Junior School" class="w-full h-full object-cover" />
+        <img src="assets/img/school.jpg" alt="Visit ALEPH Junior School" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-navy/80 mix-blend-multiply"></div>
       </div>
 
@@ -292,20 +292,23 @@
             <p class="text-gray-500 text-sm">Have a general question? We reply quickly.</p>
           </div>
 
-          <form id="messageForm" class="space-y-5">
+          <form id="messageForm" class="space-y-5" action="https://formsubmit.co/alephjuniorschool@gmail.com" method="POST">
             <div class="grid sm:grid-cols-2 gap-5">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://alephjuniorschool.com/thanks">
+              <input type="hidden" name="_subject" value="New Message!">
               <div>
                 <label class="block text-xs font-bold text-navy uppercase tracking-wider mb-2 ml-1" for="mName">Your Name</label>
-                <input id="mName" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-white border border-gray-200 text-sm outline-none" placeholder="e.g. Sarah" />
+                <input id="mName" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-white border border-gray-200 text-sm outline-none" placeholder="e.g. Sarah" name="Name"/>
               </div>
               <div>
                 <label class="block text-xs font-bold text-navy uppercase tracking-wider mb-2 ml-1" for="mPhone">Phone / WhatsApp</label>
-                <input id="mPhone" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-white border border-gray-200 text-sm outline-none" placeholder="0777 000 000" />
+                <input id="mPhone" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-white border border-gray-200 text-sm outline-none" placeholder="0777 000 000" name="Phone"/>
               </div>
             </div>
             <div>
               <label class="block text-xs font-bold text-navy uppercase tracking-wider mb-2 ml-1" for="mMsg">Your Message</label>
-              <textarea id="mMsg" required rows="4" class="form-input w-full px-5 py-3.5 rounded-2xl bg-white border border-gray-200 text-sm outline-none resize-none" placeholder="How can we help you?"></textarea>
+              <textarea id="mMsg" required rows="4" class="form-input w-full px-5 py-3.5 rounded-2xl bg-white border border-gray-200 text-sm outline-none resize-none" name="Message" placeholder="How can we help you?"></textarea>
             </div>
             <button type="submit" class="w-full px-8 py-4 rounded-full font-bold bg-navy text-white hover:bg-maroon shadow-floating hover:-translate-y-1 transition-all duration-300 flex justify-center items-center gap-2 mt-4">
               <i class="fa-solid fa-paper-plane"></i> Send Message
@@ -321,8 +324,11 @@
             <p class="text-white/70 text-sm">Provide details to begin the admission process.</p>
           </div>
 
-          <form id="enrolForm" class="space-y-5 relative z-10">
+          <form id="enrolForm" class="space-y-5 relative z-10" action="https://formsubmit.co/alephjuniorschool@gmail.com" method="POST">
             <div class="grid sm:grid-cols-2 gap-5">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://alephjuniorschool.com/thanks">
+              <input type="hidden" name="_subject" value="New Application!">
               <div>
                 <label class="block text-xs font-bold text-white/90 uppercase tracking-wider mb-2 ml-1" for="cName">Child's Name</label>
                 <input id="cName" required class="form-input w-full px-5 py-3.5 rounded-2xl bg-navy-light border border-white/10 text-white text-sm outline-none placeholder:text-white/30" placeholder="e.g. Amina N." />
@@ -507,25 +513,7 @@
       }, 3500);
     }
 
-    // Form Submissions
-    const messageForm = document.getElementById('messageForm');
-    const enrolForm = document.getElementById('enrolForm');
-
-    if (messageForm) {
-      messageForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        showToast('Message sent! We will reply shortly.');
-        messageForm.reset();
-      });
-    }
-
-    if (enrolForm) {
-      enrolForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        showToast('Enrolment request sent successfully!');
-        enrolForm.reset();
-      });
-    }
+    
   </script>
 </body>
 </html>
