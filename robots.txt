@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Optional: block utility pages
+Disallow: /404.html
+
+Sitemap: https://alephjuniorschool.com/sitemap.xml
