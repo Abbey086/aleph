@@ -1,144 +1,283 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Not Found • ALEPH Junior School</title>
-  <meta name="description" content="Oops! The page you are looking for does not exist." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found • ALEPH Junior School</title>
+    <meta
+      name="description"
+      content="Oops! The page you are looking for does not exist."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              maroon: "#932436",
+              navy: "#151635",
+              "navy-light": "#1e2046",
+              soft: "#F8F9FA",
+            },
+            boxShadow: {
+              card: "0 10px 30px rgba(21, 22, 53, 0.08)",
+              floating: "0 20px 40px rgba(147, 36, 54, 0.15)",
+            },
           },
-          colors: {
-            maroon: '#932436',
-            navy: '#151635',
-            'navy-light': '#1e2046',
-            soft: '#F8F9FA',
-          },
-          boxShadow: {
-            'card': '0 10px 30px rgba(21, 22, 53, 0.08)',
-            'floating': '0 20px 40px rgba(147, 36, 54, 0.15)',
-          }
-        }
-      }
-    }
-  </script>
-</head>
+        },
+      };
+    </script>
+  </head>
 
-<body class="font-sans text-navy bg-soft antialiased overflow-x-hidden flex flex-col min-h-screen">
-
-  <header class="fixed w-full top-0 z-50 bg-navy text-white shadow-lg transition-all duration-300">
-    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/img/aleph logo.jpeg" alt="ALEPH Logo" class="h-12 w-12 rounded-full object-cover border-2 border-maroon bg-white" onerror="this.src='https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'" />
-        <div class="leading-tight hidden sm:block">
-          <div class="font-bold tracking-wide text-lg">ALEPH JUNIOR SCHOOL</div>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
-        <a href="index.html" class="hover:text-maroon transition-colors">HOME</a>
-        <a href="gallery.html" class="hover:text-maroon transition-colors">GALLERY</a>
-        <a href="contact.html" class="hover:text-maroon transition-colors">CONTACT US</a>
-      </nav>
-      <div class="flex items-center gap-4">
-        <a href="contact.html#enrol" class="hidden sm:inline-block px-6 py-2.5 rounded-full text-sm font-bold bg-maroon text-white hover:bg-white hover:text-navy transition-colors duration-300 shadow-floating">
-          ENROL NOW
+  <body
+    class="font-sans text-navy bg-soft antialiased overflow-x-hidden flex flex-col min-h-screen"
+  >
+    <header
+      class="fixed w-full top-0 z-50 bg-navy text-white shadow-lg transition-all duration-300"
+    >
+      <div
+        class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="assets/img/aleph logo.jpeg"
+            alt="ALEPH Logo"
+            class="h-12 w-12 rounded-full object-cover border-2 border-maroon bg-white"
+            onerror="
+              this.src =
+                'https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'
+            "
+          />
+          <div class="leading-tight hidden sm:block">
+            <div class="font-bold tracking-wide text-lg">
+              ALEPH JUNIOR SCHOOL
+            </div>
+          </div>
         </a>
-        <button id="menuBtn" class="md:hidden text-white hover:text-maroon transition-colors text-2xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide"
+        >
+          <a href="index.html" class="hover:text-maroon transition-colors"
+            >HOME</a
+          >
+          <a href="gallery.html" class="hover:text-maroon transition-colors"
+            >GALLERY</a
+          >
+          <a href="contact.html" class="hover:text-maroon transition-colors"
+            >CONTACT US</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <a
+            href="contact.html#enrol"
+            class="hidden sm:inline-block px-6 py-2.5 rounded-full text-sm font-bold bg-maroon text-white hover:bg-white hover:text-navy transition-colors duration-300 shadow-floating"
+          >
+            ENROL NOW
+          </a>
+          <button
+            id="menuBtn"
+            class="md:hidden text-white hover:text-maroon transition-colors text-2xl"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </div>
-    </div>
-    <div id="mobileMenu" class="hidden bg-navy-light border-t border-white/10 px-4 py-4 md:hidden">
-      <div class="flex flex-col gap-4 text-sm font-bold tracking-wide">
-        <a href="index.html" class="hover:text-maroon transition-colors">HOME</a>
-        <a href="gallery.html" class="hover:text-maroon transition-colors">GALLERY</a>
-        <a href="contact.html" class="hover:text-maroon transition-colors">CONTACT US</a>
-        <a href="contact.html#enrol" class="inline-block text-center px-6 py-3 rounded-full bg-maroon text-white mt-2">ENROL NOW</a>
+      <div
+        id="mobileMenu"
+        class="hidden bg-navy-light border-t border-white/10 px-4 py-4 md:hidden"
+      >
+        <div class="flex flex-col gap-4 text-sm font-bold tracking-wide">
+          <a href="index.html" class="hover:text-maroon transition-colors"
+            >HOME</a
+          >
+          <a href="gallery.html" class="hover:text-maroon transition-colors"
+            >GALLERY</a
+          >
+          <a href="contact.html" class="hover:text-maroon transition-colors"
+            >CONTACT US</a
+          >
+          <a
+            href="contact.html#enrol"
+            class="inline-block text-center px-6 py-3 rounded-full bg-maroon text-white mt-2"
+            >ENROL NOW</a
+          >
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="flex-grow flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden">
-    <div class="absolute top-[20%] -left-[10%] w-[400px] h-[400px] bg-maroon/10 rounded-full blur-[80px] pointer-events-none"></div>
-    <div class="absolute bottom-[20%] -right-[10%] w-[400px] h-[400px] bg-navy/10 rounded-full blur-[80px] pointer-events-none"></div>
+    <main
+      class="flex-grow flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-[20%] -left-[10%] w-[400px] h-[400px] bg-maroon/10 rounded-full blur-[80px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-[20%] -right-[10%] w-[400px] h-[400px] bg-navy/10 rounded-full blur-[80px] pointer-events-none"
+      ></div>
 
-    <div class="max-w-2xl mx-auto text-center relative z-10" data-aos="zoom-in">
-      <div class="font-serif text-[8rem] md:text-[12rem] font-bold text-navy leading-none drop-shadow-lg mb-2">
-        4<span class="text-maroon">0</span>4
+      <div
+        class="max-w-2xl mx-auto text-center relative z-10"
+        data-aos="zoom-in"
+      >
+        <div
+          class="font-serif text-[8rem] md:text-[12rem] font-bold text-navy leading-none drop-shadow-lg mb-2"
+        >
+          4<span class="text-maroon">0</span>4
+        </div>
+        <h1 class="font-serif text-3xl md:text-5xl font-bold text-navy mb-4">
+          Oops! Page Not Found
+        </h1>
+        <p class="text-gray-600 text-lg md:text-xl mb-10 max-w-lg mx-auto">
+          It looks like you've wandered off the path. The page you are looking
+          for might have been removed or is temporarily unavailable.
+        </p>
+        <a
+          href="index.html"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold bg-navy text-white hover:bg-maroon shadow-floating hover:-translate-y-1 transition-all duration-300"
+        >
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
       </div>
-      <h1 class="font-serif text-3xl md:text-5xl font-bold text-navy mb-4">Oops! Page Not Found</h1>
-      <p class="text-gray-600 text-lg md:text-xl mb-10 max-w-lg mx-auto">
-        It looks like you've wandered off the path. The page you are looking for might have been removed or is temporarily unavailable.
-      </p>
-      <a href="index.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold bg-navy text-white hover:bg-maroon shadow-floating hover:-translate-y-1 transition-all duration-300">
-        <i class="fa-solid fa-arrow-left"></i> Back to Home
-      </a>
-    </div>
-  </main>
+    </main>
 
-  <footer class="bg-navy text-white pt-16 pb-8 border-t border-maroon/20">
-    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-12 gap-10 mb-12">
-      <div class="lg:col-span-5">
-        <div class="flex items-center gap-4 mb-6">
-          <img src="assets/img/aleph logo.jpeg" alt="ALEPH Logo" class="h-14 w-14 rounded-full border border-white/20 bg-white object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'" />
-          <div>
-            <div class="font-serif font-bold text-xl tracking-wide">ALEPH JUNIOR SCHOOL</div>
-            <div class="text-maroon font-semibold text-sm tracking-widest uppercase mt-1">Kawanda</div>
+    <footer class="bg-navy text-white pt-16 pb-8 border-t border-maroon/20">
+      <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-12 gap-10 mb-12">
+        <div class="lg:col-span-5">
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="assets/img/aleph logo.jpeg"
+              alt="ALEPH Logo"
+              class="h-14 w-14 rounded-full border border-white/20 bg-white object-cover"
+              onerror="
+                this.src =
+                  'https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'
+              "
+            />
+            <div>
+              <div class="font-serif font-bold text-xl tracking-wide">
+                ALEPH JUNIOR SCHOOL
+              </div>
+              <div
+                class="text-maroon font-semibold text-sm tracking-widest uppercase mt-1"
+              >
+                Kawanda
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-400 leading-relaxed max-w-md text-sm">
+            Baby Class to Primary Three — a school community that values
+            character as much as academics. One Team • One Dream.
+          </p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="font-bold text-lg mb-6 tracking-wide">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li>
+              <a href="index.html" class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Home</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html" class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Gallery</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html#enrol"
+                class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Admissions</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4">
+          <h4 class="font-bold text-lg mb-6 tracking-wide">Contact Us</h4>
+          <ul class="space-y-4 text-sm text-gray-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot mt-1 text-maroon"></i>
+              <span>Kawanda, Uganda<br />(See Contact Page for Map)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-maroon"></i>
+              <a
+                href="tel:+256777963043"
+                class="hover:text-white transition-colors"
+                >+256 777 963 043</a
+              >
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-brands fa-whatsapp text-maroon"></i>
+              <a
+                href="https://wa.me/256777963043"
+                class="hover:text-white transition-colors"
+                >+256 777 963 043</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 mt-8">
+        <div
+          class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium tracking-wide"
+        >
+          <p>
+            © <span id="year"></span> ALEPH Junior School. All Rights Reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="tel: 256753943599"
+              class="hover:text-white hover:underline transition-colors"
+              >Developed by Amanda Technologies</a
+            >
           </div>
         </div>
-        <p class="text-gray-400 leading-relaxed max-w-md text-sm">
-          Baby Class to Primary Three — a school community that values character as much as academics. One Team • One Dream.
-        </p>
       </div>
-      <div class="lg:col-span-3">
-        <h4 class="font-bold text-lg mb-6 tracking-wide">Quick Links</h4>
-        <ul class="space-y-3 text-sm text-gray-400">
-          <li><a href="index.html" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Home</a></li>
-          <li><a href="gallery.html" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Gallery</a></li>
-          <li><a href="contact.html" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="lg:col-span-4">
-        <h4 class="font-bold text-lg mb-6 tracking-wide">Contact Us</h4>
-        <ul class="space-y-4 text-sm text-gray-400">
-          <li class="flex items-start gap-3">
-            <i class="fa-solid fa-location-dot mt-1 text-maroon"></i>
-            <span>Kawanda, Uganda</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-phone text-maroon"></i>
-            <a href="tel:+256777963043" class="hover:text-white transition-colors">+256 777 963 043</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-white/10 pt-8 mt-8">
-      <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium tracking-wide">
-        <p>© <span id="year"></span> ALEPH Junior School. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  </script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: "ease-out-cubic",
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden"),
+      );
+    </script>
+  </body>
 </html>

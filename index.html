@@ -1,450 +1,835 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALEPH Junior School Kawanda • Home</title>
-  <meta name="description" content="ALEPH Junior School Kawanda — Baby Class to Primary Three. Character, care, and strong academics." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALEPH Junior School Kawanda • Home</title>
+    <meta
+      name="description"
+      content="ALEPH Junior School Kawanda — Baby Class to Primary Three. Character, care, and strong academics."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              maroon: "#932436",
+              navy: "#151635",
+              "navy-light": "#1e2046",
+              soft: "#F8F9FA",
+            },
+            boxShadow: {
+              card: "0 10px 30px rgba(21, 22, 53, 0.08)",
+              floating: "0 20px 40px rgba(147, 36, 54, 0.15)",
+            },
           },
-          colors: {
-            maroon: '#932436',
-            navy: '#151635',
-            'navy-light': '#1e2046',
-            soft: '#F8F9FA',
-          },
-          boxShadow: {
-            'card': '0 10px 30px rgba(21, 22, 53, 0.08)',
-            'floating': '0 20px 40px rgba(147, 36, 54, 0.15)',
-          }
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom dashed line for admission process timeline */
+      .timeline-line::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(
+          to right,
+          #151635 50%,
+          transparent 50%
+        );
+        background-size: 12px 100%;
+        z-index: -1;
+        transform: translateY(-50%);
+        opacity: 0.1;
+      }
+      @media (max-width: 768px) {
+        .timeline-line::before {
+          display: none;
         }
       }
-    }
-  </script>
+    </style>
+  </head>
 
-  <style>
-    /* Custom dashed line for admission process timeline */
-    .timeline-line::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-image: linear-gradient(to right, #151635 50%, transparent 50%);
-      background-size: 12px 100%;
-      z-index: -1;
-      transform: translateY(-50%);
-      opacity: 0.1;
-    }
-    @media (max-width: 768px) {
-      .timeline-line::before { display: none; }
-    }
-  </style>
-</head>
-
-<body class="font-sans text-navy bg-soft antialiased overflow-x-hidden">
-
-  <header class="fixed w-full top-0 z-50 bg-navy text-white shadow-lg transition-all duration-300">
-    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
-      
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/img/aleph logo.jpeg" alt="ALEPH Logo" class="h-12 w-12 rounded-full object-cover border-2 border-maroon bg-white" onerror="this.src='https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'" />
-        <div class="leading-tight hidden sm:block">
-          <div class="font-bold tracking-wide text-lg">ALEPH JUNIOR SCHOOL</div>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
-        <a href="index.html" class="text-maroon transition-colors">HOME</a>
-        <a href="gallery.html" class="hover:text-maroon transition-colors">GALLERY</a>
-        <a href="contact.html" class="hover:text-maroon transition-colors">CONTACT US</a>
-      </nav>
-
-      <div class="flex items-center gap-4">
-        <a href="contact.html#enrol" class="hidden sm:inline-block px-6 py-2.5 rounded-full text-sm font-bold bg-maroon text-white hover:bg-white hover:text-navy transition-colors duration-300 shadow-floating">
-          ENROL NOW
+  <body class="font-sans text-navy bg-soft antialiased overflow-x-hidden">
+    <header
+      class="fixed w-full top-0 z-50 bg-navy text-white shadow-lg transition-all duration-300"
+    >
+      <div
+        class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img
+            src="assets/img/aleph logo.jpeg"
+            alt="ALEPH Logo"
+            class="h-12 w-12 rounded-full object-cover border-2 border-maroon bg-white"
+            onerror="
+              this.src =
+                'https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'
+            "
+          />
+          <div class="leading-tight hidden sm:block">
+            <div class="font-bold tracking-wide text-lg">
+              ALEPH JUNIOR SCHOOL
+            </div>
+          </div>
         </a>
-        
-        <button id="menuBtn" class="md:hidden text-white hover:text-maroon transition-colors text-2xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
 
-    <div id="mobileMenu" class="hidden bg-navy-light border-t border-white/10 px-4 py-4 md:hidden">
-      <div class="flex flex-col gap-4 text-sm font-bold tracking-wide">
-        <a href="index.html" class="text-maroon">HOME</a>
-        <a href="gallery.html" class="hover:text-maroon transition-colors">GALLERY</a>
-        <a href="contact.html" class="hover:text-maroon transition-colors">CONTACT US</a>
-        <a href="contact.html#enrol" class="inline-block text-center px-6 py-3 rounded-full bg-maroon text-white mt-2">ENROL NOW</a>
-      </div>
-    </div>
-  </header>
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide"
+        >
+          <a href="index.html" class="text-maroon transition-colors">HOME</a>
+          <a href="gallery.html" class="hover:text-maroon transition-colors"
+            >GALLERY</a
+          >
+          <a href="contact.html" class="hover:text-maroon transition-colors"
+            >CONTACT US</a
+          >
+        </nav>
 
-  <main>
-    <section class="relative h-[90vh] min-h-[600px] flex items-center justify-center pt-16">
-      <div class="absolute inset-0 w-full h-full">
-        <img src="assets/img/school.jpg" alt="School Hero" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-navy/70 mix-blend-multiply"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80"></div>
-      </div>
-
-      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10" data-aos="zoom-in" data-aos-duration="1000">
-        <h1 class="font-serif text-white text-4xl sm:text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg">
-          ALEPH <span class="text-maroon">JUNIOR</span> SCHOOL
-        </h1>
-        <p class="mt-6 text-lg sm:text-xl text-white/90 font-medium tracking-wide max-w-2xl mx-auto drop-shadow-md">
-          "A joyful start. A strong foundation."
-        </p>
-        
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="contact.html#enrol" class="px-8 py-3.5 rounded-full font-bold bg-maroon text-white hover:-translate-y-1 hover:shadow-floating transition-all duration-300">
-            Enrol Now
+        <div class="flex items-center gap-4">
+          <a
+            href="contact.html#enrol"
+            class="hidden sm:inline-block px-6 py-2.5 rounded-full text-sm font-bold bg-maroon text-white hover:bg-white hover:text-navy transition-colors duration-300 shadow-floating"
+          >
+            ENROL NOW
           </a>
-          <a href="#about" class="px-8 py-3.5 rounded-full font-bold border-2 border-white text-white hover:bg-white hover:text-navy transition-all duration-300">
-            Know More
-          </a>
+
+          <button
+            id="menuBtn"
+            class="md:hidden text-white hover:text-maroon transition-colors text-2xl"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </div>
-    </section>
 
-    <section id="about" class="py-20 px-4 bg-white">
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <div class="text-maroon text-sm font-bold tracking-widest uppercase mb-2">About Us</div>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy leading-tight">
-            A place where happy <br/> childhood begins
-          </h2>
-          <p class="mt-6 text-gray-600 leading-relaxed text-lg">
-            At ALEPH Junior School Kawanda, we grow confident learners through caring routines, hands-on learning, and strong character building from Baby Class to Primary Three. We believe children learn best in a safe environment that balances play, structure, and character building.
+      <div
+        id="mobileMenu"
+        class="hidden bg-navy-light border-t border-white/10 px-4 py-4 md:hidden"
+      >
+        <div class="flex flex-col gap-4 text-sm font-bold tracking-wide">
+          <a href="index.html" class="text-maroon">HOME</a>
+          <a href="gallery.html" class="hover:text-maroon transition-colors"
+            >GALLERY</a
+          >
+          <a href="contact.html" class="hover:text-maroon transition-colors"
+            >CONTACT US</a
+          >
+          <a
+            href="contact.html#enrol"
+            class="inline-block text-center px-6 py-3 rounded-full bg-maroon text-white mt-2"
+            >ENROL NOW</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="relative md:h-screen h-[90vh] min-h-[600px] flex items-center justify-center pt-16"
+      >
+        <div class="absolute inset-0 w-full h-full">
+          <img
+            src="assets/img/gallery/7774.JPG.jpeg"
+            alt="School Hero"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-navy/70 mix-blend-multiply"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-80"
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
+          <h1
+            class="font-serif text-white text-4xl sm:text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg"
+          >
+            ALEPH <span class="text-maroon">JUNIOR</span> SCHOOL
+          </h1>
+          <p
+            class="mt-6 text-lg sm:text-xl text-white/90 font-medium tracking-wide max-w-2xl mx-auto drop-shadow-md"
+          >
+            "A joyful start. A strong foundation."
           </p>
-          <div class="mt-8 flex gap-4">
-            <a href="contact.html" class="px-6 py-3 rounded-full font-bold bg-[#f1f3f5] text-navy border border-gray-200 hover:bg-maroon hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-file-pdf mr-2 text-maroon hover:text-white transition-colors"></i> Prospectus
+
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="contact.html#enrol"
+              class="px-8 py-3.5 rounded-full font-bold bg-maroon text-white hover:-translate-y-1 hover:shadow-floating transition-all duration-300"
+            >
+              Enrol Now
             </a>
-            <a href="contact.html" class="px-6 py-3 rounded-full font-bold bg-[#f1f3f5] text-navy border border-gray-200 hover:bg-maroon hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-phone mr-2 text-maroon hover:text-white transition-colors"></i> Contact Us
+            <a
+              href="#about"
+              class="px-8 py-3.5 rounded-full font-bold border-2 border-white text-white hover:bg-white hover:text-navy transition-all duration-300"
+            >
+              Know More
             </a>
           </div>
         </div>
+      </section>
 
-        <div class="relative" data-aos="fade-left">
-          <img src="assets/img/children.jpg" alt="Teacher and Kids" class="rounded-3xl shadow-xl w-full object-cover h-[450px]" />
-          
-          <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-floating max-w-xs border-t-4 border-maroon hidden md:block" data-aos="fade-up" data-aos-delay="200">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full bg-maroon/10 flex items-center justify-center text-maroon text-xl">
-                <i class="fa-solid fa-shield-heart"></i>
+      <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <div
+              class="text-maroon text-sm font-bold tracking-widest uppercase mb-2"
+            >
+              About Us
+            </div>
+            <h2
+              class="font-serif text-4xl md:text-5xl font-bold text-navy leading-tight"
+            >
+              A place where happy <br />
+              childhood begins
+            </h2>
+            <p class="mt-6 text-gray-600 leading-relaxed text-lg">
+              At ALEPH Junior School Kawanda, we grow confident learners through
+              caring routines, hands-on learning, and strong character building
+              from Baby Class to Primary Three. We believe children learn best
+              in a safe environment that balances play, structure, and character
+              building.
+            </p>
+            <div class="mt-8 flex gap-4">
+              <a
+                href="contact.html"
+                class="px-6 py-3 rounded-full font-bold bg-[#f1f3f5] text-navy border border-gray-200 hover:bg-maroon hover:text-white transition-colors duration-300"
+              >
+                <i
+                  class="fa-solid fa-file-pdf mr-2 text-maroon hover:text-white transition-colors"
+                ></i>
+                Prospectus
+              </a>
+              <a
+                href="contact.html"
+                class="px-6 py-3 rounded-full font-bold bg-[#f1f3f5] text-navy border border-gray-200 hover:bg-maroon hover:text-white transition-colors duration-300"
+              >
+                <i
+                  class="fa-solid fa-phone mr-2 text-maroon hover:text-white transition-colors"
+                ></i>
+                Contact Us
+              </a>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-left">
+            <img
+              src="assets/img/children.jpg"
+              alt="Teacher and Kids"
+              class="rounded-3xl shadow-xl w-full object-cover h-[450px]"
+            />
+
+            <div
+              class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-floating max-w-xs border-t-4 border-maroon hidden md:block"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-maroon/10 flex items-center justify-center text-maroon text-xl"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-navy text-lg">Safe & Caring</h4>
+                  <p class="text-sm text-gray-500 mt-1">
+                    Child-friendly spaces and supportive routines.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 class="font-bold text-navy text-lg">Safe & Caring</h4>
-                <p class="text-sm text-gray-500 mt-1">Child-friendly spaces and supportive routines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 px-4 bg-soft">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <div
+              class="text-maroon text-sm font-bold tracking-widest uppercase mb-2"
+            >
+              Programs We Offer
+            </div>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">
+              Our Academic Pathways
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-[2rem] p-4 shadow-card hover:-translate-y-2 transition-transform duration-300"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="assets/img/gallery/7774.JPG.jpeg"
+                alt="Baby Class"
+                class="w-full h-56 object-cover rounded-[1.5rem] mb-6"
+              />
+              <div class="text-center px-4 pb-6">
+                <span
+                  class="inline-block px-4 py-1 rounded-full bg-maroon/10 text-maroon text-xs font-bold uppercase tracking-wider mb-4"
+                  >Level 1</span
+                >
+                <h3 class="font-serif text-2xl font-bold text-navy mb-3">
+                  KG-1
+                </h3>
+                <p class="text-gray-600 text-sm mb-6">
+                  Play-based learning, speech development, and establishing
+                  routines.
+                </p>
+                <a
+                  href="contact.html#enrol"
+                  class="inline-flex items-center text-maroon font-bold text-sm hover:underline"
+                >
+                  Enrol Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-[2rem] p-4 shadow-card hover:-translate-y-2 transition-transform duration-300 relative border-2 border-transparent hover:border-maroon/20"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/img/gallery/7797.JPG.jpeg"
+                alt="Middle/Top Class"
+                class="w-full h-56 object-cover rounded-[1.5rem] mb-6"
+              />
+              <div class="text-center px-4 pb-6">
+                <span
+                  class="inline-block px-4 py-1 rounded-full bg-maroon/10 text-maroon text-xs font-bold uppercase tracking-wider mb-4"
+                  >Level 2</span
+                >
+                <h3 class="font-serif text-2xl font-bold text-navy mb-3">
+                  KG-2 & kG-3
+                </h3>
+                <p class="text-gray-600 text-sm mb-6">
+                  Pre-reading, number sense, fine motor skills, and primary
+                  readiness.
+                </p>
+                <a
+                  href="contact.html#enrol"
+                  class="inline-flex items-center text-maroon font-bold text-sm hover:underline"
+                >
+                  Enrol Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-[2rem] p-4 shadow-card hover:-translate-y-2 transition-transform duration-300"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="assets/img/gallery/7819.JPG.jpeg"
+                alt="Primary"
+                class="w-full h-56 object-cover object-top rounded-[1.5rem] mb-6"
+              />
+              <div class="text-center px-4 pb-6">
+                <span
+                  class="inline-block px-4 py-1 rounded-full bg-maroon/10 text-maroon text-xs font-bold uppercase tracking-wider mb-4"
+                  >Level 3</span
+                >
+                <h3 class="font-serif text-2xl font-bold text-navy mb-3">
+                  Primary 1 – P.3
+                </h3>
+                <p class="text-gray-600 text-sm mb-6">
+                  Strong literacy and numeracy foundations with active character
+                  building.
+                </p>
+                <a
+                  href="contact.html#enrol"
+                  class="inline-flex items-center text-maroon font-bold text-sm hover:underline"
+                >
+                  Enrol Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="py-20 px-4 bg-soft">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <div class="text-maroon text-sm font-bold tracking-widest uppercase mb-2">Programs We Offer</div>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">Our Academic Pathways</h2>
-        </div>
+      <section class="py-20 px-4 bg-navy text-white relative overflow-hidden">
+        <div
+          class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-maroon/10 rounded-full blur-[100px]"
+        ></div>
+        <div
+          class="absolute -bottom-[20%] -left-[10%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px]"
+        ></div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-[2rem] p-4 shadow-card hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/class.jpg" alt="Baby Class" class="w-full h-56 object-cover rounded-[1.5rem] mb-6" />
-            <div class="text-center px-4 pb-6">
-              <span class="inline-block px-4 py-1 rounded-full bg-maroon/10 text-maroon text-xs font-bold uppercase tracking-wider mb-4">Level 1</span>
-              <h3 class="font-serif text-2xl font-bold text-navy mb-3">Baby Class</h3>
-              <p class="text-gray-600 text-sm mb-6">Play-based learning, speech development, and establishing routines.</p>
-              <a href="contact.html#enrol" class="inline-flex items-center text-maroon font-bold text-sm hover:underline">
-                Enrol Now <i class="fa-solid fa-arrow-right ml-2"></i>
-              </a>
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <div
+              class="text-maroon text-sm font-bold tracking-widest uppercase mb-2"
+            >
+              Why Choose Us
             </div>
-          </div>
-
-          <div class="bg-white rounded-[2rem] p-4 shadow-card hover:-translate-y-2 transition-transform duration-300 relative border-2 border-transparent hover:border-maroon/20" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/class.jpg" alt="Middle/Top Class" class="w-full h-56 object-cover rounded-[1.5rem] mb-6" />
-            <div class="text-center px-4 pb-6">
-              <span class="inline-block px-4 py-1 rounded-full bg-maroon/10 text-maroon text-xs font-bold uppercase tracking-wider mb-4">Level 2</span>
-              <h3 class="font-serif text-2xl font-bold text-navy mb-3">Middle & Top</h3>
-              <p class="text-gray-600 text-sm mb-6">Pre-reading, number sense, fine motor skills, and primary readiness.</p>
-              <a href="contact.html#enrol" class="inline-flex items-center text-maroon font-bold text-sm hover:underline">
-                Enrol Now <i class="fa-solid fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-[2rem] p-4 shadow-card hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
-            <img src="assets/img/class.jpg" alt="Primary" class="w-full h-56 object-cover object-top  rounded-[1.5rem] mb-6" />
-            <div class="text-center px-4 pb-6">
-              <span class="inline-block px-4 py-1 rounded-full bg-maroon/10 text-maroon text-xs font-bold uppercase tracking-wider mb-4">Level 3</span>
-              <h3 class="font-serif text-2xl font-bold text-navy mb-3">Primary 1 – P.3</h3>
-              <p class="text-gray-600 text-sm mb-6">Strong literacy and numeracy foundations with active character building.</p>
-              <a href="contact.html#enrol" class="inline-flex items-center text-maroon font-bold text-sm hover:underline">
-                Enrol Now <i class="fa-solid fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 px-4 bg-navy text-white relative overflow-hidden">
-      <div class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-maroon/10 rounded-full blur-[100px]"></div>
-      <div class="absolute -bottom-[20%] -left-[10%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px]"></div>
-
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <div class="text-maroon text-sm font-bold tracking-widest uppercase mb-2">Why Choose Us</div>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">What Your Child Gains</h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">A clear pathway — from play-based learning to structured literacy and numeracy foundations.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl">
-              <i class="fa-solid fa-book-open"></i>
-            </div>
-            <h4 class="font-bold text-lg mb-2">Early Reading</h4>
-            <p class="text-xs text-gray-400 group-hover:text-white/80">Phonics foundations & literacy.</p>
-          </div>
-          <div class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl">
-              <i class="fa-solid fa-calculator"></i>
-            </div>
-            <h4 class="font-bold text-lg mb-2">Number Sense</h4>
-            <p class="text-xs text-gray-400 group-hover:text-white/80">Counting, patterns & logic.</p>
-          </div>
-          <div class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="300">
-            <div class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl">
-              <i class="fa-solid fa-paintbrush"></i>
-            </div>
-            <h4 class="font-bold text-lg mb-2">Fine-Motor Skills</h4>
-            <p class="text-xs text-gray-400 group-hover:text-white/80">Writing prep & practical life.</p>
-          </div>
-          <div class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group" data-aos="fade-up" data-aos-delay="400">
-            <div class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl">
-              <i class="fa-solid fa-users"></i>
-            </div>
-            <h4 class="font-bold text-lg mb-2">Social Confidence</h4>
-            <p class="text-xs text-gray-400 group-hover:text-white/80">Teamwork & daily discipline.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 px-4 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <div class="text-maroon text-sm font-bold tracking-widest uppercase mb-2">Core Principles</div>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">Academic Excellence</h2>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-card border-t-4 border-t-maroon" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-12 h-12 rounded-full bg-maroon/10 text-maroon flex items-center justify-center text-xl mb-6">
-              <i class="fa-solid fa-eye"></i>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-navy mb-4">Our Vision</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">
-              To raise confident, disciplined and thoughtful learners prepared for lifelong success, equipping them with tools for future challenges.
+            <h2
+              class="font-serif text-4xl md:text-5xl font-bold text-white mb-4"
+            >
+              What Your Child Gains
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+              A clear pathway — from play-based learning to structured literacy
+              and numeracy foundations.
             </p>
           </div>
 
-          <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-card border-t-4 border-t-maroon" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-12 h-12 rounded-full bg-maroon/10 text-maroon flex items-center justify-center text-xl mb-6">
-              <i class="fa-solid fa-bullseye"></i>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div
+              class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl"
+              >
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Early Reading</h4>
+              <p class="text-xs text-gray-400 group-hover:text-white/80">
+                Phonics foundations & literacy.
+              </p>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-navy mb-4">Our Mission</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">
-              To provide quality early education with a focus on care, character and building a very strong academic foundation.
-            </p>
-          </div>
-
-          <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-card border-t-4 border-t-navy" data-aos="fade-up" data-aos-delay="300">
-            <div class="w-12 h-12 rounded-full bg-navy/10 text-navy flex items-center justify-center text-xl mb-6">
-              <i class="fa-solid fa-gem"></i>
+            <div
+              class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl"
+              >
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Number Sense</h4>
+              <p class="text-xs text-gray-400 group-hover:text-white/80">
+                Counting, patterns & logic.
+              </p>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-navy mb-4">Our Values</h3>
-            <ul class="text-gray-600 leading-relaxed text-sm space-y-2">
-              <li><i class="fa-solid fa-check text-maroon mr-2"></i> Respect & Responsibility</li>
-              <li><i class="fa-solid fa-check text-maroon mr-2"></i> Teamwork</li>
-              <li><i class="fa-solid fa-check text-maroon mr-2"></i> Discipline</li>
-              <li><i class="fa-solid fa-check text-maroon mr-2"></i> Excellence</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 px-4 bg-soft border-t border-gray-200 overflow-hidden">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <div class="text-maroon text-sm font-bold tracking-widest uppercase mb-2">Join Us</div>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">Admission Process</h2>
-        </div>
-
-        <div class="relative timeline-line">
-          <div class="grid md:grid-cols-3 gap-8 text-center relative z-10">
-            <div class="bg-white p-6 rounded-3xl shadow-card inline-block" data-aos="zoom-in" data-aos-delay="100">
-              <div class="w-16 h-16 mx-auto bg-navy text-white rounded-full border-4 border-white shadow-md flex items-center justify-center text-xl font-bold mb-4">1</div>
-              <h4 class="font-bold text-navy text-lg mb-2">Child Details</h4>
-              <p class="text-gray-500 text-sm">Provide child's name, age, and preferred class level (Baby–P.3).</p>
+            <div
+              class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl"
+              >
+                <i class="fa-solid fa-paintbrush"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Fine-Motor Skills</h4>
+              <p class="text-xs text-gray-400 group-hover:text-white/80">
+                Writing prep & practical life.
+              </p>
             </div>
-            <div class="bg-white p-6 rounded-3xl shadow-card inline-block" data-aos="zoom-in" data-aos-delay="200">
-              <div class="w-16 h-16 mx-auto bg-maroon text-white rounded-full border-4 border-white shadow-md flex items-center justify-center text-xl font-bold mb-4">2</div>
-              <h4 class="font-bold text-navy text-lg mb-2">Parent / Guardian</h4>
-              <p class="text-gray-500 text-sm">Submit your phone number and WhatsApp availability for contact.</p>
-            </div>
-            <div class="bg-white p-6 rounded-3xl shadow-card inline-block" data-aos="zoom-in" data-aos-delay="300">
-              <div class="w-16 h-16 mx-auto bg-navy text-white rounded-full border-4 border-white shadow-md flex items-center justify-center text-xl font-bold mb-4">3</div>
-              <h4 class="font-bold text-navy text-lg mb-2">Location Setup</h4>
-              <p class="text-gray-500 text-sm">Confirm area/stage to guide transport & finalize enrolment.</p>
+            <div
+              class="bg-navy-light/50 border border-white/10 rounded-2xl p-6 text-center hover:bg-maroon transition-colors duration-300 group"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-maroon group-hover:text-white transition-colors mb-4 text-xl"
+              >
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Social Confidence</h4>
+              <p class="text-xs text-gray-400 group-hover:text-white/80">
+                Teamwork & daily discipline.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="py-20 px-4 bg-white">
-      <div class="max-w-7xl mx-auto text-center">
-        <div data-aos="fade-up">
-          <div class="text-maroon text-sm font-bold tracking-widest uppercase mb-2">Explore</div>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-10">Our Gallery</h2>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-10">
-          <div class="overflow-hidden rounded-2xl group" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/children.jpg" alt="Gallery 1" class="w-full h-48 md:h-64 object-cover object-top transform group-hover:scale-110 transition-transform duration-500" />
+      <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <div
+              class="text-maroon text-sm font-bold tracking-widest uppercase mb-2"
+            >
+              Core Principles
+            </div>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">
+              Academic Excellence
+            </h2>
           </div>
-          <div class="overflow-hidden rounded-2xl group" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/children.jpg" alt="Gallery 2" class="w-full h-48 md:h-64 object-cover object-top  transform group-hover:scale-110 transition-transform duration-500" />
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white border border-gray-100 rounded-3xl p-8 shadow-card border-t-4 border-t-maroon"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-maroon/10 text-maroon flex items-center justify-center text-xl mb-6"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy mb-4">
+                Our Vision
+              </h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                To raise confident, disciplined and thoughtful learners prepared
+                for lifelong success, equipping them with tools for future
+                challenges.
+              </p>
+            </div>
+
+            <div
+              class="bg-white border border-gray-100 rounded-3xl p-8 shadow-card border-t-4 border-t-maroon"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-maroon/10 text-maroon flex items-center justify-center text-xl mb-6"
+              >
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy mb-4">
+                Our Mission
+              </h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                To provide quality early education with a focus on care,
+                character and building a very strong academic foundation.
+              </p>
+            </div>
+
+            <div
+              class="bg-white border border-gray-100 rounded-3xl p-8 shadow-card border-t-4 border-t-navy"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-navy/10 text-navy flex items-center justify-center text-xl mb-6"
+              >
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy mb-4">
+                Our Values
+              </h3>
+              <ul class="text-gray-600 leading-relaxed text-sm space-y-2">
+                <li>
+                  <i class="fa-solid fa-check text-maroon mr-2"></i> Respect &
+                  Responsibility
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-maroon mr-2"></i> Teamwork
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-maroon mr-2"></i> Discipline
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-maroon mr-2"></i> Excellence
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="overflow-hidden rounded-2xl group" data-aos="fade-up" data-aos-delay="300">
-            <img src="assets/img/children.jpg" alt="Gallery 3" class="w-full h-48 md:h-64 object-cover object-top  transform group-hover:scale-110 transition-transform duration-500" />
+        </div>
+      </section>
+
+      <section
+        class="py-20 px-4 bg-soft border-t border-gray-200 overflow-hidden"
+      >
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <div
+              class="text-maroon text-sm font-bold tracking-widest uppercase mb-2"
+            >
+              Join Us
+            </div>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">
+              Admission Process
+            </h2>
+          </div>
+
+          <div class="relative timeline-line">
+            <div class="grid md:grid-cols-3 gap-8 text-center relative z-10">
+              <div
+                class="bg-white p-6 rounded-3xl shadow-card inline-block"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div
+                  class="w-16 h-16 mx-auto bg-navy text-white rounded-full border-4 border-white shadow-md flex items-center justify-center text-xl font-bold mb-4"
+                >
+                  1
+                </div>
+                <h4 class="font-bold text-navy text-lg mb-2">Child Details</h4>
+                <p class="text-gray-500 text-sm">
+                  Provide child's name, age, and preferred class level
+                  (Baby–P.3).
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-3xl shadow-card inline-block"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div
+                  class="w-16 h-16 mx-auto bg-maroon text-white rounded-full border-4 border-white shadow-md flex items-center justify-center text-xl font-bold mb-4"
+                >
+                  2
+                </div>
+                <h4 class="font-bold text-navy text-lg mb-2">
+                  Parent / Guardian
+                </h4>
+                <p class="text-gray-500 text-sm">
+                  Submit your phone number and WhatsApp availability for
+                  contact.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-3xl shadow-card inline-block"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div
+                  class="w-16 h-16 mx-auto bg-navy text-white rounded-full border-4 border-white shadow-md flex items-center justify-center text-xl font-bold mb-4"
+                >
+                  3
+                </div>
+                <h4 class="font-bold text-navy text-lg mb-2">Location Setup</h4>
+                <p class="text-gray-500 text-sm">
+                  Confirm area/stage to guide transport & finalize enrolment.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <a href="gallery.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300" data-aos="fade-up">
-          View More Gallery
-        </a>
+      <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+          <div data-aos="fade-up">
+            <div
+              class="text-maroon text-sm font-bold tracking-widest uppercase mb-2"
+            >
+              Explore
+            </div>
+            <h2
+              class="font-serif text-4xl md:text-5xl font-bold text-navy mb-10"
+            >
+              Our Gallery
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-10">
+            <div
+              class="overflow-hidden rounded-2xl group"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="assets/img/gallery/7808.JPG.jpeg"
+                alt="Gallery 1"
+                class="w-full h-48 md:h-64 object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div
+              class="overflow-hidden rounded-2xl group"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/img/gallery/7792.JPG.jpeg"
+                alt="Gallery 2"
+                class="w-full h-48 md:h-64 object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div
+              class="overflow-hidden rounded-2xl group"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="assets/img/gallery/7862.jpg.jpeg"
+                alt="Gallery 3"
+                class="w-full h-48 md:h-64 object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <a
+            href="gallery.html"
+            class="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300"
+            data-aos="fade-up"
+          >
+            View More Gallery
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-navy text-white pt-16 pb-8 border-t border-maroon/20">
+      <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-12 gap-10 mb-12">
+        <div class="lg:col-span-5">
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="assets/img/aleph logo.jpeg"
+              alt="ALEPH Logo"
+              class="h-14 w-14 rounded-full border border-white/20 bg-white object-cover"
+              onerror="
+                this.src =
+                  'https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'
+              "
+            />
+            <div>
+              <div class="font-serif font-bold text-xl tracking-wide">
+                ALEPH JUNIOR SCHOOL
+              </div>
+              <div
+                class="text-maroon font-semibold text-sm tracking-widest uppercase mt-1"
+              >
+                Kawanda
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-400 leading-relaxed max-w-md text-sm">
+            Baby Class to Primary Three — a school community that values
+            character as much as academics. One Team • One Dream.
+          </p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="font-bold text-lg mb-6 tracking-wide">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li>
+              <a href="index.html" class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Home</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html" class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Gallery</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html#enrol"
+                class="hover:text-maroon transition-colors"
+                ><i class="fa-solid fa-angle-right mr-2 text-maroon"></i>
+                Admissions</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4">
+          <h4 class="font-bold text-lg mb-6 tracking-wide">Contact Us</h4>
+          <ul class="space-y-4 text-sm text-gray-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot mt-1 text-maroon"></i>
+              <span>Kawanda, Uganda<br />(See Contact Page for Map)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-maroon"></i>
+              <a
+                href="tel:+256777963043"
+                class="hover:text-white transition-colors"
+                >+256 777 963 043</a
+              >
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-brands fa-whatsapp text-maroon"></i>
+              <a
+                href="https://wa.me/256777963043"
+                class="hover:text-white transition-colors"
+                >+256 777 963 043</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="bg-navy text-white pt-16 pb-8 border-t border-maroon/20">
-    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-12 gap-10 mb-12">
-      <div class="lg:col-span-5">
-        <div class="flex items-center gap-4 mb-6">
-          <img src="assets/img/aleph logo.jpeg" alt="ALEPH Logo" class="h-14 w-14 rounded-full border border-white/20 bg-white object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Aleph&background=932436&color=fff&rounded=true'" />
-          <div>
-            <div class="font-serif font-bold text-xl tracking-wide">ALEPH JUNIOR SCHOOL</div>
-            <div class="text-maroon font-semibold text-sm tracking-widest uppercase mt-1">Kawanda</div>
+      <div class="border-t border-white/10 pt-8 mt-8">
+        <div
+          class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium tracking-wide"
+        >
+          <p>
+            © <span id="year"></span> ALEPH Junior School. All Rights Reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="tel: 256753943599"
+              class="hover:text-white hover:underline transition-colors"
+              >Developed by Amanda Technologies</a
+            >
           </div>
         </div>
-        <p class="text-gray-400 leading-relaxed max-w-md text-sm">
-          Baby Class to Primary Three — a school community that values character as much as academics. One Team • One Dream.
-        </p>
       </div>
+    </footer>
 
-      <div class="lg:col-span-3">
-        <h4 class="font-bold text-lg mb-6 tracking-wide">Quick Links</h4>
-        <ul class="space-y-3 text-sm text-gray-400">
-          <li><a href="index.html" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Home</a></li>
-          <li><a href="gallery.html" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Gallery</a></li>
-          <li><a href="contact.html" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Contact Us</a></li>
-          <li><a href="contact.html#enrol" class="hover:text-maroon transition-colors"><i class="fa-solid fa-angle-right mr-2 text-maroon"></i> Admissions</a></li>
-        </ul>
-      </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS animations
+      AOS.init({
+        once: true, // whether animation should happen only once - while scrolling down
+        offset: 80, // offset (in px) from the original trigger point
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: "ease-out-cubic", // default easing for AOS animations
+      });
 
-      <div class="lg:col-span-4">
-        <h4 class="font-bold text-lg mb-6 tracking-wide">Contact Us</h4>
-        <ul class="space-y-4 text-sm text-gray-400">
-          <li class="flex items-start gap-3">
-            <i class="fa-solid fa-location-dot mt-1 text-maroon"></i>
-            <span>Kawanda, Uganda<br/>(See Contact Page for Map)</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-phone text-maroon"></i>
-            <a href="tel:+256777963043" class="hover:text-white transition-colors">+256 777 963 043</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-brands fa-whatsapp text-maroon"></i>
-            <a href="https://wa.me/256777963043" class="hover:text-white transition-colors">+256 777 963 043</a>
-          </li>
-        </ul>
+      // Dynamic Year
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-        <div class="mt-6 flex gap-3">
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-maroon transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-maroon transition-colors"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
+      // Header scroll effect
+      const header = document.querySelector("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("shadow-lg", "bg-navy/95", "backdrop-blur");
+          header.classList.remove("bg-navy");
+        } else {
+          header.classList.remove("shadow-lg", "bg-navy/95", "backdrop-blur");
+          header.classList.add("bg-navy");
+        }
+      });
 
-    <div class="border-t border-white/10 pt-8 mt-8">
-      <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium tracking-wide">
-        <p>© <span id="year"></span> ALEPH Junior School. All Rights Reserved.</p>
-        <div class="flex gap-4">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize AOS animations
-    AOS.init({
-      once: true, // whether animation should happen only once - while scrolling down
-      offset: 80, // offset (in px) from the original trigger point
-      duration: 800, // values from 0 to 3000, with step 50ms
-      easing: 'ease-out-cubic', // default easing for AOS animations
-    });
-
-    // Dynamic Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Header scroll effect
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('shadow-lg', 'bg-navy/95', 'backdrop-blur');
-        header.classList.remove('bg-navy');
-      } else {
-        header.classList.remove('shadow-lg', 'bg-navy/95', 'backdrop-blur');
-        header.classList.add('bg-navy');
-      }
-    });
-
-    // Mobile Menu Toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-</body>
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
